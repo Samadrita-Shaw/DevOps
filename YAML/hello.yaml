@@ -1,0 +1,15 @@
+#key: value
+"apple": "I am a fruit"
+1: "This is a roll number"
+---
+#list
+- apple
+- orange
+- Apple #YAML is case-sensitive
+---
+#block style
+cities:
+  - jamshedpur
+  - new delhi
+  - mumbai
+...
