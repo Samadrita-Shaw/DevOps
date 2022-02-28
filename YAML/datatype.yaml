@@ -1,0 +1,53 @@
+#storing string
+name: Samadrita Shaw
+fruit: "watermelon"
+city: 'Jamshedpur'
+
+#storing multiple lines
+bio: |
+Hello I'm Samadrita.
+All good.
+
+#storing a single line as vmultiple line
+message: >
+This is 
+a 
+single line.
+#Equivalent to-> message: This is a single line.
+
+number: 2465 #integer
+marks: 97.2
+value: No 
+myValue: Yes
+
+#Specifying the datatype
+
+#int
+num: !!int 45
+positiveNum: !!int 5
+negativeNum: !!int -5
+binaryNum: !!int 0b1101
+octalNum: !!int 06597
+hexa: !!int 0x54
+commaValue: !!int 540_000 #540,000
+
+#float
+floatNum: !!float 56.31
+infinite: !!float .inf
+not a num: .nan 
+
+#boolean
+v: !!bool No
+
+#string
+s: !!str Hello
+
+#null
+n: !!null Null
+~: This is a null key
+
+#date and time
+date: !!timestamp 2002-07-26
+time: 2001-12-15 2:59:43.10 #no-time zone
+autoTime: 2001-12-15T02:59:43.1Z #If the time zone is omitted, the timestamp is assumed to be specified in UTC.
+indianTime: 2001-12-15 2:59:43.10 +5:30
