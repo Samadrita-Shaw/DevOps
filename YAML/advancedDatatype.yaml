@@ -1,0 +1,56 @@
+student: !!seq
+ - name
+ - roll_no
+ - marks
+#can also be written as-> student: [name, roll_no, marks]
+
+#sparse sequence-> some of the value of the sequence is emplty.
+sparse seq:
+ - hello
+ - how
+ - 
+ - Null
+ - bye
+
+#pairs: keys with duplicate values
+# !!pairs
+self: !!pairs
+ - job: student
+ - job: teacher
+
+#same as-> self: !!pairs [job: student, job: teacher]
+
+#set!! will allow to have unique values
+names: !!set
+ ? Kumar
+ ? Mira
+ ? Rou
+#equivalent to 
+# "names": {
+#   "Kumar": null,
+#    "Mira": null,
+#    "Rou": null
+# }
+
+#dictionary: The value is a list !!omap
+people: !!omap
+ - Rani:
+    name: Rani Mathers
+    age: 52
+ - Raju:
+    name: Mighty Raju
+    age: 36
+
+#reusing properties using anchors
+likings: &likes
+ fav: mango
+ dislike: grapes
+
+person1:
+ name: Alpha
+ <<: *likes
+
+person2:
+ name: brendal
+ <<: *likes
+ dislike: berries
